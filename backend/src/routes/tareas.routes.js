@@ -57,10 +57,10 @@ router.get("/one/:id",(req,res)=>{
 router.post("/post", (req, res) => {
     try {
 
-        const { titulo, descripcion } = req.body
+        const { estado, descripcion, id_tabla_tareas } = req.body
         const dbCnx = mysqlConexion();
 
-        dbCnx.query(`INSERT INTO tareas (titulo,descripcion) VALUES ('${titulo}','${descripcion}')`, (err, response) => {
+        dbCnx.query(`INSERT INTO tareas (descripcion,estado,id_tabla_tareas) VALUES ('${descripcion}','${estado}','${id_tabla_tareas}')`, (err, response) => {
             if (err) {
                 console.log(err);
                 res.json("error en query");
@@ -105,11 +105,11 @@ router.put("/put/:id",(req,res)=>{
     try {
 
         const {id} = req.params
-        const {titulo,descripcion} = req.body
+        const {estado,descripcion,id_tabla_tareas} = req.body
 
         const dbCnx = mysqlConexion()
 
-        dbCnx.query(`UPDATE tareas SET titulo = '${titulo}', descripcion = '${descripcion}' where id=${id}`,(err,response)=>{
+        dbCnx.query(`UPDATE tareas SET estado = '${estado}', descripcion = '${descripcion}', id_tabla_tareas = '${id_tabla_tareas}' where id=${id}`,(err,response)=>{
             if (err) {
                 console.log(err);
                 res.json("error en query put")
