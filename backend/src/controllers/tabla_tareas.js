@@ -54,11 +54,11 @@ const getOneTablaTareas = (req, res) => {
 const postTablaTareas = (req, res) => {
     try {
 
-        const { titulo, descripcion, pinned, fecha_inicio, ultima_modificacion, id_logo, id_fondo, id_proyecto } = req.body
+        const { titulo, descripcion, pinned, fecha_inicio, ultima_modificacion, id_icono, id_fondo, id_proyecto } = req.body
 
         const dbCnx = mysqlConexion()
 
-        dbCnx.query(`INSERT INTO tabla_tareas( titulo, descripcion, pinned, fecha_inicio, ultima_modificacion, id_logo, id_fondo, id_proyecto) VALUES ('${titulo}', '${descripcion}', '${pinned}', '${fecha_inicio}', '${ultima_modificacion}', '${id_logo}', '${id_fondo}', '${id_proyecto}') `, (err, response) => {
+        dbCnx.query(`INSERT INTO tabla_tareas( titulo, descripcion, pinned, fecha_inicio, ultima_modificacion, id_icono, id_fondo, id_proyecto) VALUES ('${titulo}', '${descripcion}', '${pinned}', '${fecha_inicio}', '${ultima_modificacion}', '${id_icono}', '${id_fondo}', '${id_proyecto}') `, (err, response) => {
             if (err) {
                 console.log(err);
                 res.json("error en query post")
@@ -105,11 +105,11 @@ const putTablaTareas = (req, res) => {
     try {
 
         const { id } = req.params
-        const { titulo, descripcion, pinned, fecha_inicio, ultima_modificacion, id_logo, id_fondo, id_proyecto } = req.body
+        const { titulo, descripcion, pinned, fecha_inicio, ultima_modificacion, id_icono, id_fondo, id_proyecto } = req.body
 
         const dbCnx = mysqlConexion()
 
-        dbCnx.query(`UPDATE tabla_tareas SET titulo='${titulo}', descripcion='${descripcion}', pinned='${pinned}', fecha_inicio='${fecha_inicio}', ultima_modificacion='${ultima_modificacion}', id_logo='${id_logo}', id_fondo='${id_fondo}', id_proyecto='${id_proyecto}' WHERE id=${id} `, (err, response) => {
+        dbCnx.query(`UPDATE tabla_tareas SET titulo='${titulo}', descripcion='${descripcion}', pinned='${pinned}', fecha_inicio='${fecha_inicio}', ultima_modificacion='${ultima_modificacion}', id_icono='${id_icono}', id_fondo='${id_fondo}', id_proyecto='${id_proyecto}' WHERE id=${id} `, (err, response) => {
             if (err) {
                 console.log(err);
                 res.json("error en query put")

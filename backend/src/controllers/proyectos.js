@@ -54,11 +54,11 @@ const getOneProyectos = (req, res) => {
 const postProyectos = (req, res) => {
     try {
 
-        const { descripcion, estado, fecha_creacion, id_usuario } = req.body
+        const { titulo, descripcion, estado, fecha_creacion, id_usuario } = req.body
 
         const dbCnx = mysqlConexion()
 
-        dbCnx.query(`INSERT INTO proyectos(descripcion, estado, fecha_creacion, id_usuario) VALUES ('${descripcion}','${estado}','${fecha_creacion}','${id_usuario}' `, (err, response) => {
+        dbCnx.query(`INSERT INTO proyectos(titulo, descripcion, estado, fecha_creacion, id_usuario) VALUES ('${titulo}','${descripcion}','${estado}','${fecha_creacion}','${id_usuario}') `, (err, response) => {
             if (err) {
                 console.log(err);
                 res.json("error en query post")
@@ -104,11 +104,11 @@ const putProyectos = (req, res) => {
     try {
 
         const { id } = req.params
-        const { descripcion, estado, fecha_creacion, id_usuario } = req.body
+        const { titulo, descripcion, estado, fecha_creacion, id_usuario } = req.body
 
         const dbCnx = mysqlConexion()
 
-        dbCnx.query(`UPDATE proyectos SET descripcion = '${descripcion}', estado= '${estado}', fecha_creacion='${fecha_creacion}', id_usuario='${id_usuario}' WHERE id=${id} `, (err, response) => {
+        dbCnx.query(`UPDATE proyectos SET titulo='${titulo}', descripcion = '${descripcion}', estado= '${estado}', fecha_creacion='${fecha_creacion}', id_usuario='${id_usuario}' WHERE id=${id} `, (err, response) => {
             if (err) {
                 console.log(err);
                 res.json("error en query put")

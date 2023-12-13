@@ -17,6 +17,9 @@ const app = express()
 
 //parsear a json
 app.use(express.json())
+
+
+
 //app.use("/categoriasTareas",categoria_tareasRouter)
 app.use("/categorias",categoriaRouter)
 app.use("/fondos",fondosRouter)

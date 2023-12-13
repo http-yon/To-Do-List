@@ -1,4 +1,4 @@
--- Active: 1702472183486@@127.0.0.1@3306@todoDB
+-- Active: 1702486267687@@127.0.0.1@3306@todoDB
 
 
 USE todoDB;
@@ -72,6 +72,7 @@ CREATE TABLE tabla_tareas(
 
 CREATE TABLE proyectos(
     id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(255) NOT NULL,
     descripcion VARCHAR(255) NOT NULL,
     estado VARCHAR(255) NOT NULL,
     fecha_creacion DATETIME NOT NULL,
