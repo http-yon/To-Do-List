@@ -1,5 +1,6 @@
--- Active: 1702486267687@@127.0.0.1@3306@todoDB
+-- Active: 1701819414792@@127.0.0.1@3306@todoDB
 
+CREATE DATABASE todoDB;
 
 USE todoDB;
 

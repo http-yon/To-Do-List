@@ -1,38 +1,145 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #4a5568;
+  padding: 0.5rem;
+}
+
+.navText {
+  display: flex;
+  gap: 3rem;
+
+  
+}
+
+.Nav {
+  color: #e4e7eb;
+  text-decoration: none;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100vw;
+  height: 92vh;
+  background-color: #718096;
+}
+
+.loginCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.loginCont div {
+  padding: 1.5rem 7rem;
+}
+
+
+.loginText {
+  display: flex;
+  align-items: center;
+  background-color: #4a5568;
+  flex-direction: column;
+  border: 2px solid black;
+  color: #e4e7eb;
+}
+
+.loginText h5{
+ margin-top: 2rem;
+}
+
+.loginText div {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.loginText div input {
+  padding: 0.35rem 1.1rem;
+  border: 1px solid black;
+}
+
+.loginText div button {
+  padding: 0.35rem 3rem;
+  border: 1px solid black;
+}
+
+.ingresar {
+  padding: 0.35rem 3rem;
+  background-color: burlywood;
+  border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+.register {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100vw;
+  height: 92vh;
+  background-color: #718096;
+}
+
+.registerCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.registerCont div {
+  padding: 1.5rem 7rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.registerText {
+  display: flex;
+  align-items: center;
+  background-color: #4a5568;
+  flex-direction: column;
+  border: 2px solid black;
+  color: #e4e7eb;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.registerText div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: start;
 }
 
-.App-link {
-  color: #61dafb;
+.registerText div input {
+  padding: 0.35rem 1.1rem;
+  border: 1px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.registerText div button {
+  padding: 0.35rem 3rem;
+  border: 1px solid black;
 }
+
+.registrar {
+  padding: 0.35rem 3rem;
+  background-color: burlywood;
+  border: 1px solid black;
+}
+
+.registerText h5{
+  margin-top: 2rem;
+ }
